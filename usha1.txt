@@ -1,0 +1,98 @@
+<html>
+<head>
+<title>Form Validation Using Java Script</title>
+<style>
+body{
+background-image:url('https://cdn.pixabay.com/photo/2021/09/15/21/29/lake-6627781_960_720.jpg')
+}</style>
+<script type="text/javascript">
+function validation()
+{
+if(document.f1.name.value=="")
+{
+window.alert("Plz Enter Your Name");
+return false;
+}
+else if(document.f1.email.value=="")
+{
+window.alert("Plz Enter Your E-mail:");
+return false;
+}
+else if(document.f1.email.value.indexOf('@gmail.com')==-1)
+{
+window.alert("Plz Enter Your Valid E-mail");
+return false;
+}
+else if(document.f1.Dept.value=="")
+{
+window.alert("Plz Enter Your Dept:");
+return false;
+}
+else if(document.f1.RegNo.value=="");
+{
+window.alert("Plz enter Your Regno:");
+return false;
+}
+else if(document.f1.Mobile Number.value==0)
+{
+Window.alert(Plz Enter Your Mobile Number:");
+return false;
+}
+else if(document.f1.session.value==")
+{
+Window.alert("plz Enter Your Session:");
+return false;
+}
+else((document.f1.rdo[0].checked=false)&&(document.f1.rdo[1].checked==false)&&(document.f1.rdo[2].checked==false))
+{
+Window.alert(Plz Enter Your Course:");
+return false;
+}
+else
+if((document.f1.chk[0].checked=false)&&(document.f1.chk[1].checked==false)&&(document.f1.chk[2].checked==false))
+{
+Window.alert("Plz Choose your Gender"):
+return false;
+}
+else
+return true;
+}
+</script> </head>
+<body>
+<h3 style="text-align:center">Exam Registration</h3>
+
+<form name="f1" action="Register.html" onsubmit="return validation()">
+<fieldset>
+<legend>Registration Form</legend> <br/>
+<table border="1">
+<tr><td>Name:</td> <td><input type="text" name="name" size="31"></td> </tr>
+<tr><td>E-mail:</td> <td><input type="text" name="email" size="31"></td> </tr>
+<tr><td>Dept:</td> <td><input type="text" name="Dept" size="31"></td></tr>
+<tr><td>Regno:</td><td><input type="text"name="Regno"size="31"></td></tr>
+<tr><td>Mobile Number:</td><td><input type="text"name="Mobile Number"size="31"></td></tr>
+<tr>
+<td>Session:</td>
+<td><select name="session">
+<option>---Select Your Session---</option>
+<option>FN</option>
+<option>AN</Option>
+</Select>
+</td>
+</tr>
+<tr>
+<td>Gender:</td>
+<td>
+<input type="radio" name="rdo">Male
+<input type="radio" name="rdo">Female
+<input type="radio" name="rdo">Transgender 
+</td>
+</tr>
+<tr>
+<td>Course:</td><td>
+<input type="checkbox" name="chk">IT
+<input type="checkbox" name="chk">CSE
+<input type="checkbox" name="chk">ECE
+</td>
+</tr>
+</table><br/>
+<input type="submit" value="Register"></fieldset></form></body></html>
